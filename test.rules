@@ -1,0 +1,12 @@
+#这个文件用于提交IDS的snort规则的相关作业
+
+
+
+
+
+#第一个规则的要求如下：
+#detect a tcp packet with
+#Destination Port at 8080,TCPFLAG ACK set,a string "I am IDS Homework 1" in play load [100thbyte-200thbyte]
+#alert message "TEST ALERT"
+
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS 8080 (flags:A; content:"I am IDS Homework 1"; offset:100; depth:100; msg:"TEST ALERT"; rev:1;)
