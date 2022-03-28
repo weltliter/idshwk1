@@ -4,7 +4,7 @@
 
 
 
-#第一个规则的要求如下：
+#规则的要求如下：
 #detect a tcp packet with
 #Destination Port at 8080,TCPFLAG ACK set,a string "I am IDS Homework 1" in play load [100thbyte-200thbyte]
 #alert message "TEST ALERT"
