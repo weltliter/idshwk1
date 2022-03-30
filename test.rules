@@ -9,4 +9,4 @@
 #Destination Port at 8080,TCPFLAG ACK set,a string "I am IDS Homework 1" in play load [100thbyte-200thbyte]
 #alert message "TEST ALERT"
 
-alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS 8080 (flags:A; content:"I am IDS Homework 1"; offset:100; depth:100; msg:"TEST ALERT"; rev:1;)
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS 8080 (flags:A; content:"I am IDS Homework 1"; offset:100; depth:100; msg:"TEST ALERT"; sid:46; rev:1;)
